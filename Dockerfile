@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cmake \
         git \
         wget \
-	nano \
         libatlas-base-dev \
         libboost-all-dev \
         libgflags-dev \
@@ -47,3 +46,4 @@ RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 WORKDIR /workspace
 
 RUN apt-get update
+RUN apt-get install nano
