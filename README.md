@@ -57,3 +57,7 @@ And since our container is now running we can test the binary rtpose.bin on our 
 <pre>./build/examples/rtpose/rtpose.bin --image_dir /workspace/APIDIS/OriginalDatasetFramesUndistortedResized/camera1 --no_frame_drops --write_frames /workspace/APIDIS/output/camera1 --write_json /workspace/APIDIS/output/camera1 --num_scales 3 --scale_gap 0.15  --no_display</pre>
 
 
+
+UPDATE: Network issues with the latest version of docker. Solution: http://stackoverflow.com/a/40516974
+
+
