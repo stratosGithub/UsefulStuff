@@ -60,4 +60,15 @@ And since our container is now running we can test the binary rtpose.bin on our 
 
 UPDATE: Network issues with the latest version of docker. Solution: http://stackoverflow.com/a/40516974
 
+UPDATE2: To forward jupyter and tensorboard ports 8888 and 6006: 
+<pre> sudo nvidia-docker run -p 8888:8888 -p 6006:6006 -it --rm -v hostFolder:dockerFolder DOCKER_IMAGE_NAME </pre>
+In our case: 
+<pre>sudo nvidia-docker run -p 8888:8888 -p 6006:6006 -it --rm -v /media/stratos/DataPartition/Dropbox/ProgrammingUCL/DeepLearning:/workspace/DeepLearning -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY stratos/tensorflow1.0:withJupyter</pre>
+To run jupyter you need to specify -ip 0.0.0.0: 
+<pre>jupyter notebook --ip 0.0.0.0 --no-browser </pre>
+
+
+
+
+
 
