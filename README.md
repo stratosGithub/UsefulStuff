@@ -67,6 +67,10 @@ In our case:
 To run jupyter you need to specify -ip 0.0.0.0: 
 <pre>jupyter notebook --ip 0.0.0.0 --no-browser </pre>
 
+UPDATE3: Docker for GUI-based environments
+http://stackoverflow.com/questions/24095968/docker-for-gui-based-environments
+
+docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY TheImage
 
 
 
